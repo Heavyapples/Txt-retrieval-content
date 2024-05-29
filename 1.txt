@@ -1,0 +1,33 @@
+Text Search
+Write a program that can finds all occurrences of a string in a plain text file. The program will then save the results of the search in results.txt in the current directory and will contain a listing of line numbers and the line content where matches were found.
+All code for the program must be in search.py .
+Program Interface
+When the program is run it shall immediately prompt the user for the:
+- path to the file to search,
+- starting line number (i.e. skip over all lines before this line, first line is 1)
+- ending line number (i.e. ignore all lines after this line)
+- text to be matched
+which are to be entered single SPACE separated.
+Values of starting and ending line number can exceed the the length of the file e.g. 0 for start or an end line greater than the number of lines in the file. These must be clipped to the start and end of the file.
+Example
+PATH START END TEXT: zen.txt 15 better than
+Output
+Results from the search are to be saved in results.txt with the following format:
+\begin{tabular}{|c|c|c|c|c|}
+\hline & & & TEXT & iJ \\
+\hline 1 & LINE_NUMBER: & LINE_CONTENTS & & \\
+\hline 2 & LINE_NUMBER: & LINE_CONTENTS & & \\
+\hline 3 & $\ldots$ & & & \\
+\hline 4 & LINE NUMBER: & LINE_CONTENTS & & \\
+\hline
+\end{tabular}
+When more than one match is found on a line, it shall only be reported once.
+Example
+Following the earlier example from "Program Interface" the expected output from the "Zen of Python" found in zen.txt would be:
+1 1: Beautiful is better than ugly.
+2 2: Explicit is better than implicit.
+3 3: Simple is better than complex.
+4 4: Complex is better than complicated.
+5 5: Flat is better than nested.
+6 6: Sparse is better than dense.
+7 15: Now is better than never.

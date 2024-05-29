@@ -1,0 +1,1 @@
+2: Write a program that can finds all occurrences of a string in a plain text file. The program will then save the results of the search in results.txt in the current directory and will contain a listing of line numbers and the line content where matches were found.
